@@ -1,43 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>Monroe County POD Planning Drill</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+    line-height: 1.5;
+}
+
+.hero {
+    background: #f2f5f7;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 8px 8px 8px 0;
+    background: #1f5f99;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #143f66;
+}
+
+img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.card {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.disclaimer {
+    background: #fff3cd;
+    border: 1px solid #ffe08a;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 35px;
+    font-size: 0.9em;
+    color: #555;
+}
+</style>
 </head>
 
 <body>
 
+<div class="hero">
 <h1>Monroe County POD Planning Drill</h1>
 
 <p>
-Prototype GIS planning product showing emergency food and water
+This prototype GIS planning product evaluates emergency food and water
 Point of Distribution (POD) coverage in Monroe County, Pennsylvania.
+The analysis uses Census block group demographics and two candidate POD
+locations to estimate population coverage and identify areas that may need
+additional distribution support.
 </p>
 
-<h2>Map Preview</h2>
+<a class="button" href="map.html">Open Interactive Web Map</a>
+<a class="button" href="Test1.pdf">Download PDF Map</a>
+<a class="button" href="Monroe_POD_Drill_v01.png">View Static Map Image</a>
+</div>
 
-<img src="Monroe_POD_Drill_v01.png"
-     width="900">
-
-<h2>Download PDF</h2>
+<div class="card">
+<h2>Project Background</h2>
 
 <p>
-<a href="Test1.pdf">
-Download PDF Map
-</a>
+Following a disaster, counties may establish Points of Distribution to provide
+food, water, and emergency commodities to the public. This drill tests how GIS
+can support POD planning by estimating which populations are located within a
+reasonable planning distance of proposed POD sites.
 </p>
 
-<h2>Summary</h2>
+<p>
+The current analysis is based on two candidate POD locations:
+</p>
 
 <ul>
-<li>Served Population: 126,781</li>
-<li>Served Households: 46,246</li>
-<li>Coverage: 75.68%</li>
-<li>Unserved Population: 40,734</li>
+<li>Pleasant Valley High School Parking Lot</li>
+<li>Urgent Care Parking Lot</li>
 </ul>
+</div>
+
+<div class="card">
+<h2>Planning Results</h2>
+
+<ul>
+<li><strong>Served Population:</strong> 126,781</li>
+<li><strong>Served Households:</strong> 46,246</li>
+<li><strong>Population Coverage:</strong> 75.68%</li>
+<li><strong>Unserved Population:</strong> 40,734</li>
+<li><strong>Unserved Households:</strong> 14,966</li>
+<li><strong>Unserved Population:</strong> 24.32%</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Map Preview</h2>
+
+<img src="Monroe_POD_Drill_v01.png" alt="Monroe County POD Planning Map">
+</div>
+
+<div class="card">
+<h2>Data and Method</h2>
+
+<ul>
+<li>2024 ACS Census block group population and household data</li>
+<li>Candidate POD site locations</li>
+<li>20-minute planning coverage model</li>
+<li>35 mph average travel speed assumption</li>
+<li>Served and unserved population summarized by Census block group</li>
+</ul>
+</div>
+
+<div class="disclaimer">
+<h2>Important Note</h2>
 
 <p>
-Prepared by Josh Green
+This is a planning and exercise product only. It is not an official operational
+deployment map. The current model uses a planning-distance assumption and should
+be refined with road-network drive-time analysis, local emergency management
+input, site access review, traffic flow planning, and commodity throughput
+estimates before operational use.
 </p>
+</div>
+
+<div class="card">
+<h2>Next Steps</h2>
+
+<ul>
+<li>Refine analysis using true road-network drive-time modeling</li>
+<li>Add additional candidate POD locations</li>
+<li>Estimate population coverage for 90% and 95% service goals</li>
+<li>Include access and functional needs indicators</li>
+<li>Develop a repeatable POD planning toolkit for Pennsylvania counties</li>
+</ul>
+</div>
+
+<footer>
+<p>
+Prepared by Josh Green<br>
+Pennsylvania Emergency Communications GIS Project
+</p>
+</footer>
 
 </body>
 </html>
